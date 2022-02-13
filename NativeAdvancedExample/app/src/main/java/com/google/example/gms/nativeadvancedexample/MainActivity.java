@@ -18,6 +18,8 @@ package com.google.example.gms.nativeadvancedexample;
 
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -208,6 +210,7 @@ public class MainActivity extends AppCompatActivity {
                     nativeAd.destroy();
                 }
                 nativeAd = unifiedNativeAd;
+                Log.e("Ads Headline", nativeAd.getHeadline());
                 FrameLayout frameLayout =
                         findViewById(R.id.fl_adplaceholder);
                 UnifiedNativeAdView adView = (UnifiedNativeAdView) getLayoutInflater()
